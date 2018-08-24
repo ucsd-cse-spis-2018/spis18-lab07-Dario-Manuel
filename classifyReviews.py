@@ -4,8 +4,12 @@ from nltk.classify import NaiveBayesClassifier
 from nltk.corpus import stopwords
 from nltk.classify.util import accuracy
 
+nltk.download('stopwords')
+nltk.download('punkt')
+
 # "Stop words" that you might want to use in your project/an extension
 stop_words = set(stopwords.words('english'))
+
 
 def format_sentence(sent):
     ''' format the text setence as a bag of words for use in nltk'''
@@ -38,7 +42,7 @@ def formatForClassifier(dataList, label):
     # TODO: Write this function, change the return value
     formatted = []
     for reviewString in dataList:
-        formatted.append([format_sentence(reviewString), rating])
+        formatted.append([format_sentence(reviewString), label])
     return formatted
 
 def classifyReviews():
