@@ -36,7 +36,10 @@ def formatForClassifier(dataList, label):
                 [format_sentence(doc), label]
     '''
     # TODO: Write this function, change the return value
-    return []
+    formatted = []
+    for reviewString in dataList:
+        formatted.append([format_sentence(reviewString), rating])
+    return formatted
 
 def classifyReviews():
     ''' Perform sentiment classification on movie reviews ''' 
@@ -88,5 +91,5 @@ def classifyReviews():
     # TODO: Print the misclassified examples
 
 
-if __name__ == "__main__":
-    classifyReviews()
+#if __name__ == "__main__":
+#    classifyReviews()
