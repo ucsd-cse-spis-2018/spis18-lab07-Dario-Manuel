@@ -78,11 +78,11 @@ def classifyReviews():
 
     # Train a Naive Bayes Classifier
     # Uncomment the next line once the code above is working
-    #classifier = NaiveBayesClassifier.train(training)
+    classifier = NaiveBayesClassifier.train(training)
 
     # Uncomment the next two lines once everything above is working
-    #print("Accuracy of the classifier is: " + str(accuracy(classifier, test)))
-    #classifier.show_most_informative_features()
+    print("Accuracy of the classifier is: " + str(accuracy(classifier, test)))
+    classifier.show_most_informative_features()
 
     # TODO: Calculate and print the accuracy on the positive and negative
     # documents separately
@@ -95,5 +95,5 @@ def classifyReviews():
     # TODO: Print the misclassified examples
 
 
-#if __name__ == "__main__":
-#    classifyReviews()
+if __name__ == "__main__":
+    classifyReviews()
