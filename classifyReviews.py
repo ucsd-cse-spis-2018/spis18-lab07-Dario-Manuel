@@ -26,7 +26,7 @@ def splitTrainTest(data, trainProp):
     '''
     # TODO: You will write this function, and change the return value
     targetLocation = int(len(data) * trainProp)
-    return (dataList[:targetLocation], dataList[targetLocation:])
+    return (data[:targetLocation], data[targetLocation:])
 
 def formatForClassifier(dataList, label):
     ''' input: A list of documents represented as text strings
